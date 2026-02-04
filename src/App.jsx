@@ -61,6 +61,7 @@ function App() {
               id="email"
               value={profile.email}
               onChange={handleChange}
+              autoComplete="email"
             />
 
             <label htmlFor="password">Senha</label>
@@ -70,6 +71,7 @@ function App() {
               id="password"
               value={profile.password}
               onChange={handleChange}
+              autoComplete="new-password"
             />
 
             <label htmlFor="birthdate">Data de nascimento</label>
