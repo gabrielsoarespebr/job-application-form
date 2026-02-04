@@ -4,9 +4,9 @@ import "./App.css";
 function App() {
   const [profile, setProfile] = useState({
     name: "",
-    // email: "",
-    // password: "",
-    // birthdate: "",
+    email: "",
+    password: "",
+    birthdate: "",
     // position: "",
     // level: "",
     // ...
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <div style={{ display: "flex" }}>
+      <div className="page">
         <div>
           <p>Mapeamento de tipo</p>
           <ul>
@@ -53,6 +53,33 @@ function App() {
               value={profile.name}
               onChange={handleChange}
             />
+
+            <label htmlFor="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={profile.email}
+              onChange={handleChange}
+            />
+
+            <label htmlFor="password">Senha</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value={profile.password}
+              onChange={handleChange}
+            />
+
+            <label htmlFor="birthdate">Data de nascimento</label>
+            <input
+              type="date"
+              name="birthdate"
+              id="birthdate"
+              value={profile.birthdate}
+              onChange={handleChange}
+            />
           </form>
         </div>
 
@@ -60,9 +87,9 @@ function App() {
           <p>Feedback visual em tempo real</p>
           <ul>
             <li>Nome completo: {profile.name}</li>
-            <li>E-mail: {}</li>
-            <li>Senha: {}</li>
-            <li>Data de nascimento: {}</li>
+            <li>E-mail: {profile.email}</li>
+            <li>Senha: {profile.password}</li>
+            <li>Data de nascimento: {profile.birthdate}</li>
             <li>Cargo desejado: {}</li>
             <li>Senioridade: {}</li>
             <li>Modelo de trabalho: {}</li>
